@@ -100,7 +100,9 @@
 }
 
 .icon-block {
-    transform: translateY(10%);
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .more-btn {

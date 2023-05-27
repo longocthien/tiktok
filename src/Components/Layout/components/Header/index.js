@@ -3,7 +3,6 @@ import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faBookmark,
-    faCircleQuestion,
     faCircleXmark,
     faCoins,
     faEarthAsia,
@@ -51,7 +50,7 @@ const MENU_ITEMS = [
         },
     },
     {
-        icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+        icon: <FontAwesomeIcon icon={faUser} />,
         title: 'Feedback and help',
         to: '/feedback',
     },
@@ -84,7 +83,7 @@ function Header() {
 
     const userMenu = [
         {
-            icon: <FontAwesomeIcon icon={faUser} />,
+            icon: <FontAwesomeIcon icon={faBookmark} />,
             title: 'View profile',
             to: '/feedback',
         },
@@ -157,16 +156,16 @@ function Header() {
                 <div className={cx('action')}>
                     {currentUser ? (
                         <div className={cx('icon-block')}>
-                            <Tippy
-                                content="Upload video"
-                                delay={[0, 200]}
-                                placement="bottom"
-                            >
+                            <Button upload medium>
+                                + Upload
+                            </Button>
+
+                            <Tippy content="Messages" placement="bottom">
                                 <button className={cx('action-btn')}>
                                     <MessageIcon />
                                 </button>
                             </Tippy>
-                            <Tippy content="Upload video">
+                            <Tippy content="Inbox" placement="bottom">
                                 <button className={cx('action-btn')}>
                                     <InboxIcon />
                                 </button>
