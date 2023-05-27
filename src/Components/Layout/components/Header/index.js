@@ -5,7 +5,6 @@ import {
     faBookmark,
     faCircleQuestion,
     faCircleXmark,
-    faCloudUpload,
     faCoins,
     faEarthAsia,
     faEllipsisVertical,
@@ -26,6 +25,8 @@ import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/Components/Popper';
 import AccountItem from '~/Components/AccountItem';
 import Menu from '~/Components/Popper/Menu';
+import { MessageIcon, InboxIcon } from '~/Components/Icons';
+import Image from '~/Components/images';
 
 const cx = classNames.bind(styles);
 
@@ -155,22 +156,22 @@ function Header() {
                 </HeadlessTippy>
                 <div className={cx('action')}>
                     {currentUser ? (
-                        <>
+                        <div className={cx('icon-block')}>
                             <Tippy
                                 content="Upload video"
                                 delay={[0, 200]}
                                 placement="bottom"
                             >
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <MessageIcon />
                                 </button>
                             </Tippy>
-                            {/* <Tippy content="Upload video">
+                            <Tippy content="Upload video">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faMessage} />
+                                    <InboxIcon />
                                 </button>
-                            </Tippy> */}
-                        </>
+                            </Tippy>
+                        </div>
                     ) : (
                         <>
                             <Button upload medium>
@@ -184,10 +185,10 @@ function Header() {
                         onChange={handleMenuChange}
                     >
                         {currentUser ? (
-                            <img
-                                src="https://absatzwirtschaft-1cf93.kxcdn.com/wp-content/uploads/2022/05/how-to-nft-c-Adidas-1.jpg"
+                            <Image
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
+                                fallback="https://absatzwirtschaft-1cf93.kxcdn.com/wp-content/uploads/2022/05/how-to-nft-c-Adidas-1.jpg"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
