@@ -136,7 +136,7 @@ function Header() {
                             <Image
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
-                                fallback="https://absatzwirtschaft-1cf93.kxcdn.com/wp-content/uploads/2022/05/how-to-nft-c-Adidas-1.jpg"
+                                src="https://absatzwirtschaft-1cf93.kxcdn.com/wp-content/uploads/2022/05/how-to-nft-c-Adidas-1.jpg"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
