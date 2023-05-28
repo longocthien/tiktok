@@ -1,10 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-import {
-    faCircleXmark,
-    faMagnifyingGlass,
-    faSpinner,
-} from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 import * as searchServices from '~/apiServices/searchServices';
 import HeadlessTippy from '@tippyjs/react/headless';
@@ -53,6 +49,8 @@ function Search() {
     const handleHideResult = () => {
         setShowResult(false);
     };
+
+    const handleSubmit = () => {};
     return (
         <HeadlessTippy
             interactive
@@ -87,14 +85,9 @@ function Search() {
                         <FontAwesomeIcon icon={faCircleXmark} />
                     </button>
                 )}
-                {loading && (
-                    <FontAwesomeIcon
-                        className={cx('loading')}
-                        icon={faSpinner}
-                    />
-                )}
+                {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
 
-                <button className={cx('search-btn')}>
+                <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault}>
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </button>
             </div>
