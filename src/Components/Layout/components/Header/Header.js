@@ -22,6 +22,7 @@ import Menu from '~/Components/Popper/Menu';
 import { MessageIcon, InboxIcon } from '~/Components/Icons';
 import Image from '~/Components/Images';
 import Search from '../Search';
+import { PlusIcon } from '~/Components/Icons';
 
 const cx = classNames.bind(styles);
 
@@ -111,7 +112,7 @@ function Header() {
                     {currentUser ? (
                         <div className={cx('icon-block')}>
                             <Button upload medium>
-                                + Upload
+                                <PlusIcon /> Upload
                             </Button>
 
                             <Tippy content="Messages" placement="bottom">
@@ -128,7 +129,7 @@ function Header() {
                     ) : (
                         <>
                             <Button upload medium>
-                                + Upload
+                                <PlusIcon /> Upload
                             </Button>
                             <Button primary>Log in</Button>
                         </>

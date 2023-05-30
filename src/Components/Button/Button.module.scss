@@ -28,6 +28,11 @@
     margin-left: 8px;
 }
 
+.title {
+    display: flex;
+    gap: 8px;
+}
+
 .icon {
     display: inline-block;
     width: 24px;
@@ -82,7 +87,7 @@
 
 .medium {
     min-width: 113.6px;
-    padding: 8px 16px;
+    padding: 7px 16px;
 }
 
 .large {

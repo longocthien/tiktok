@@ -6,8 +6,10 @@ import Home from '~/pages/Home';
 import Following from '~/pages/Following';
 import Profile from '~/pages/Profile';
 import Upload from '~/pages/Upload';
+import Explore from '~/pages/Explore';
 import Search from '~/pages/Search';
 import { HeaderOnly } from '~/Components/Layout';
+import Live from '~/pages/Profile';
 
 // Public Routes
 const publicRoutes = [
@@ -32,6 +34,14 @@ const publicRoutes = [
         path: config.routes.search,
         component: Search,
         layout: null,
+    },
+    {
+        path: config.routes.explore,
+        component: Explore,
+    },
+    {
+        path: config.routes.live,
+        component: Live,
     },
 ];
 
